@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="site">
+        <div class="ui massive menu">
+            <div class="ui container">
+                <div class="item"><a href="/">Home</a></div>
+                <div class="item">About</div>
+                <div class="item">Contact</div>
+                <div class="item">Blog</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="ui container">
+            <form id="form" action="/edit/<%= mahasiswa._id %>" class="ui form" method="POST">
+                <div class="three fields">
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan Nama</label>
+                        <input type="text" name="nama" placeholder="Masukkan Nama" value="<%= mahasiswa.nama %>"  id="nama">
+                    </div>
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan NIM</label>
+                        <input type="text" name="nim" placeholder="Masukkan nim" value="<%= mahasiswa.nim %>" id="nim">
+                    </div>
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan Prodi</label>
+                        <input type="text" name="prodi" placeholder="Masukkan Prodi" value="<%= mahasiswa.prodi %>" id="prodi">
+                    </div>
+                </div>
+                <!-- <div class=" one fields"> -->
+                    <div class="field fluid">
+                        <button type="submit" class="ui button fluid green">Save</button>
+                    </div>
+                <!-- </div> -->
+            </form>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>

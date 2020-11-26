@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="site">
+        <div class="ui massive menu">
+            <div class="ui container">
+                <div class="item"><a href="/">Home</a></div>
+                <div class="item">About</div>
+                <div class="item">Contact</div>
+                <div class="item">Blog</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="ui container">
+            <form id="form" action="/add" class="ui form" method="POST">
+                <div class="three fields">
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan Nama</label>
+                        <input type="text" name="nama" placeholder="Masukkan Nama" value=""  id="nama">
+                    </div>
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan NIM</label>
+                        <input type="text" name="nim" placeholder="Masukkan NIM" value="" id="nim">
+                    </div>
+                    <div class="field">
+                        <label for="label" class="ui header green">Masukkan Prodi</label>
+                        <input type="text" name="prodi" placeholder="Masukkan Prodi" value="" id="prodi">
+                    </div>
+                </div>
+                <!-- <div class=" one fields"> -->
+                    <div class="field fluid">
+                        <button type="submit" class="ui button fluid green">Save</button>
+                    </div>
+                <!-- </div> -->
+            </form>
+            <br>
+            <br>
+            <br>
+            
+            <table class="ui table green" >
+                <thead>
+                    <tr>
+                        <th>Nama Mahasiswa</th>
+                        <th>NIM</th>
+                        <th>Prodi</th>
+                        <th >Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% mahasiswas.forEach((mahasiswa)=>{%>
+                        <tr>
+                            <td id="mahasiswaNama"><%- mahasiswa.nama %></td>
+                            <td id="mahasiswaNim"><%- mahasiswa.nim %></td>
+                            <td id="mahasiswaCoach"><%- mahasiswa.prodi %></td>
+                            <td><a class="ui button green editBtn" href="/edit/<%= mahasiswa._id %>"><i class="edit white icon"></i></a></td>
+                            <td><a class="ui button green actnBtn" href="/<%= mahasiswa._id %>"><i id="delete" class="minus red icon"></i></a></td>
+                        </tr>
+                      <% }); %>
+                </tbody>
+            
+                <!-- <tbody>
+                    <tr>
+                        <td>Andi</td>
+                        <td>00010002</td>
+                        <td>D3 Sistem Informasi</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                    <tr>
+                        <td>Budi</td>
+                        <td>00020003</td>
+                        <td>S1 Teknik Informatika</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                    <tr>
+                        <td>Rizki</td>
+                        <td>00030004</td>
+                        <td>S1 Sistem Informasi</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                </tbody> -->
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
