@@ -1,8 +1,10 @@
 // INSTALL NPM
-$ npm install
+
+npm install
 
 // INSTALL NPM GLOBAL NODEMON
-$ npm install -g nodemon
+
+npm install -g nodemon
 
 // CONNECT KE LOCALHOST
 http://localhost:8000/ atau http://127.0.0.1:8000/
