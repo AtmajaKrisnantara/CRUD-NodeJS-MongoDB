@@ -6,6 +6,10 @@
 
 - npm install -g nodemon
 
+### COMMAND RUN APP
+
+- nodemon
+
 ### CONNECT KE LOCALHOST
 
 http://localhost:8000/ atau http://127.0.0.1:8000/
