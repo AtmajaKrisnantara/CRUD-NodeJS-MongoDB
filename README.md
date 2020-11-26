@@ -1,10 +1,10 @@
 ### INSTALL NPM
 
-npm install
+- npm install
 
 ### INSTALL NPM GLOBAL NODEMON
 
-npm install -g nodemon
+- npm install -g nodemon
 
 ### CONNECT KE LOCALHOST
 
